@@ -22,8 +22,16 @@
 				<RowDefinition Height="auto"></RowDefinition>
 			</Grid.RowDefinitions>
 			<CommandBar Grid.Row="0" Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left">
-				<AppBarButton Icon="Add" Label="New Game"/>
-				<AppBarButton Icon="Help" Label="About"/>
+				<AppBarButton x:Name="NewGameButton" Icon="Add" Label="New Game" Click="NewGameButton_Click">
+					<AppBarButton.KeyboardAccelerators>
+						<KeyboardAccelerator Modifiers="Control" Key="N"/>
+					</AppBarButton.KeyboardAccelerators>
+				</AppBarButton>
+				<AppBarButton x:Name="AboutButton" Icon="Help" Label="About">
+					<AppBarButton.KeyboardAccelerators>
+						<KeyboardAccelerator Key="F1"/>
+					</AppBarButton.KeyboardAccelerators>
+				</AppBarButton>
 			</CommandBar>
 			<Grid Grid.Row="1">
 				<Grid.RowDefinitions>

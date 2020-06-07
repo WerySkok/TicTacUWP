@@ -135,5 +135,28 @@ namespace TicTacUWP
         {
             SetMark(2, 2);
         }
+
+        private void NewGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            ClearGameArea();
+        }
+
+        void ClearGameArea()
+        {
+            gameArea = new [,]{ { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
+            gameEnded = false;
+            for(int i = 0; i <= 2; i++)
+            {
+                for(int a = 0; a <= 2; a++)
+                {
+                    Button ChosenButton = this.FindName("Button" + a + i) as Button;
+                    ChosenButton.Content = null;
+                }
+            }
+            if(whoPlays)
+                SetStatusBarText("X player's turn.");
+            else
+                SetStatusBarText("O player's turn.");
+        }
     }
 }
