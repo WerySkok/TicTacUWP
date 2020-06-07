@@ -158,5 +158,11 @@ namespace TicTacUWP
             else
                 SetStatusBarText("O player's turn.");
         }
+
+        private void AboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            About aboutDialog = new About();
+            aboutDialog.ShowAsync();
+        }
     }
 }

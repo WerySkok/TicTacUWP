@@ -27,7 +27,7 @@
 						<KeyboardAccelerator Modifiers="Control" Key="N"/>
 					</AppBarButton.KeyboardAccelerators>
 				</AppBarButton>
-				<AppBarButton x:Name="AboutButton" Icon="Help" Label="About">
+				<AppBarButton x:Name="AboutButton" Icon="Help" Label="About" Click="AboutButton_Click">
 					<AppBarButton.KeyboardAccelerators>
 						<KeyboardAccelerator Key="F1"/>
 					</AppBarButton.KeyboardAccelerators>

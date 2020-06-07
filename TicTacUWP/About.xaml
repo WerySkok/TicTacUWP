@@ -1,0 +1,27 @@
+﻿<ContentDialog
+    x:Class="TicTacUWP.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TicTacUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="About TicTacUWP"
+    PrimaryButtonText="OK"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick" Loaded="ContentDialog_Loaded">
+
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<TextBlock x:Name="TextRow1" Grid.Row="0" HorizontalAlignment="Center">TicTacUWP 1.0</TextBlock>
+		<TextBlock x:Name="TextRow2" Grid.Row="1" HorizontalAlignment="Center">By WerySkok</TextBlock>
+		<TextBlock x:Name="TextRow3" Grid.Row="2" HorizontalAlignment="Center">Made with C# and UWP</TextBlock>
+		<TextBlock x:Name="TextRow4" Grid.Row="3" HorizontalAlignment="Center">Based on Tic-Tac-Toe by Veselcraft</TextBlock>
+		<TextBlock x:Name="TextRow5" Grid.Row="4" HorizontalAlignment="Center">Sources are on <Hyperlink NavigateUri="https://github.com/WerySkok/TicTacUWP">GitHub</Hyperlink></TextBlock>
+	</Grid>
+</ContentDialog>
