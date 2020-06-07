@@ -75,6 +75,10 @@ namespace TicTacUWP
                 Window.Current.Activate();
 
                 ExtendAcrylicIntoTitleBar();
+
+                ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(218, 280));
+                ApplicationView.PreferredLaunchViewSize = new Size(360, 450);
+                ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             }
         }
         private void ExtendAcrylicIntoTitleBar()

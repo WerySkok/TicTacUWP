@@ -31,10 +31,6 @@ namespace TicTacUWP
         public MainPage()
         {
             this.InitializeComponent();
-
-            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(218, 280));
-            ApplicationView.PreferredLaunchViewSize = new Size(218, 280);
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
         }
 
         void SetMark(int x, int y)
@@ -57,8 +53,39 @@ namespace TicTacUWP
                     SetStatusBarText("X player's turn.");
                     whoPlays = true;
                 }
+                CheckForWinner();
             }
         }
+
+        void CheckForWinner()
+        {
+            for(int i = 1; i <= 2; i++)
+            {
+                if(gameArea[0,0] == i && gameArea[0,1] == i && gameArea[0,2] == i ||
+                    gameArea[1,0] == i && gameArea[1,1] == i && gameArea[1,2] == i ||
+                    gameArea[2,0] == i && gameArea[2,1] == i && gameArea[2,2] == i ||
+                    gameArea[0,0] == i && gameArea[1,1] == i && gameArea[2,2] == i ||
+                    gameArea[0,2] == i && gameArea[1,1] == i && gameArea[2,0] == i ||
+                    gameArea[0,0] == i && gameArea[1,0] == i && gameArea[2,0] == i ||
+                    gameArea[0,1] == i && gameArea[1,1] == i && gameArea[2,1] == i ||
+                    gameArea[0,2] == i && gameArea[1,2] == i && gameArea[2,2] == i)
+                {
+                    string winner;
+                    if(i == 1)
+                    {
+                        winner = "X is the winner!";
+                    }
+                    else
+                    {
+                        winner = "O is the winner!";
+                    }
+                    SetStatusBarText("Start a new game.");
+                    new ContentDialog { Title = "Tic-Tac-Toe", Content = winner, PrimaryButtonText = "OK", Width=218 }.ShowAsync();
+                    gameEnded = true;
+                }
+            }
+        }
+
         void SetStatusBarText(string text)
         {
             StatusBar.Text = text;

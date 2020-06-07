@@ -5,7 +5,7 @@
     xmlns:local="using:TicTacUWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" RequestedTheme="Light" MinWidth="218" MinHeight="280" d:DesignWidth="218" d:DesignHeight="280">
+    mc:Ignorable="d" RequestedTheme="Light" MinWidth="218" MinHeight="280" d:DesignWidth="360" d:DesignHeight="450">
 	<Page.Background>
 		<AcrylicBrush TintOpacity="0.75" BackgroundSource="HostBackdrop" FallbackColor="#FFE6E6E6" TintColor="#FFE6E6EA"/>
 	</Page.Background>
