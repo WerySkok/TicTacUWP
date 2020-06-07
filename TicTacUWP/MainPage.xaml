@@ -36,19 +36,19 @@
 					<ColumnDefinition></ColumnDefinition>
 					<ColumnDefinition></ColumnDefinition>
 				</Grid.ColumnDefinitions>
-				<Button x:Name="Button00" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}"/>
-				<Button x:Name="Button01" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}"/>
-				<Button x:Name="Button02" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}"/>
+				<Button x:Name="Button00" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}" Click="Button00_Click"/>
+				<Button x:Name="Button01" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}" Click="Button01_Click"/>
+				<Button x:Name="Button02" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}" Click="Button02_Click"/>
 
-				<Button x:Name="Button10" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}"/>
-				<Button x:Name="Button11" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}"/>
-				<Button x:Name="Button12" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}"/>
+				<Button x:Name="Button10" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}" Click="Button10_Click"/>
+				<Button x:Name="Button11" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}" Click="Button11_Click"/>
+				<Button x:Name="Button12" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}" Click="Button12_Click"/>
 
-				<Button x:Name="Button20" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}"/>
-				<Button x:Name="Button21" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}"/>
-				<Button x:Name="Button22" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}"/>
+				<Button x:Name="Button20" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}" Click="Button20_Click"/>
+				<Button x:Name="Button21" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}" Click="Button21_Click"/>
+				<Button x:Name="Button22" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Style="{StaticResource ButtonRevealStyle}" Click="Button22_Click"/>
 			</Grid>
-			<TextBlock Grid.Row="2" Text="X's player turn." Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,5,0,5"></TextBlock>
+			<TextBlock x:Name="StatusBar" Grid.Row="2" Text="X's player turn." Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,5,0,5"></TextBlock>
 		</Grid>
 	</Grid>
 </Page>
